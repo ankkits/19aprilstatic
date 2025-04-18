@@ -11,8 +11,8 @@ app = Flask(__name__,
 app.secret_key = os.urandom(24)
 
 # Get your EspoCRM API config from environment variables or set manually
-ESPOCRM_API_KEY = os.getenv("ESPOCRM_API_KEY", "42c7dd457cf25a3486072b4bd9a68c39")
-ESPOCRM_API_URL = os.getenv("ESPOCRM_API_URL", "http://localhost/espo/api/v1/Lead")
+ESPOCRM_API_URL = os.environ.get("ESPOCRM_API_URL")
+ESPOCRM_API_KEY = os.environ.get("ESPOCRM_API_KEY")
 
 @app.route('/')
 def index():
