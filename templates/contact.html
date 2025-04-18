@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="static/img/favicon.png" />
+  <title>CONTACT</title>
+  <link rel="stylesheet" href="static/css/style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <a href="index.html" class="header__logo logo"><img src="static/images/About/logo.jpg" alt="Logo" /></a>
+        <div class="header__navigation">
+          <div class="header__menu menu">
+            <nav class="menu__body">
+              <nav class="menu__body">
+                <ul class="menu__list">
+                  <li class="menu__item"><a href="/" class="menu__link">Home</a></li>
+                  <li class="menu__item"><a href="/about" class="menu__link">About</a></li>
+                  <li class="menu__item"><a href="/services" class="menu__link">Services</a></li>
+                  <li class="menu__item"><a href="/contact" class="menu__link">Contact</a></li>
+                </ul>
+              </nav>
+          </div>
+          <div class="header__actions actions-header">
+            <button type="button" class="menu__icon icon-menu"><span></span></button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="page">
+      <section class="page__main main main_contact main_pages" style="margin-top: -8rem;">
+        <div class="main__container main__container_pages" style="max-width: 1200px; margin: 0 auto; position: relative;">
+          <h1 class="main__title" style="font-size: 1.8rem; text-align: center; margin-bottom: 1.5rem;">Contact</h1>
+          {% if success_message %}
+          <div class="alert alert-success" style="background-color: #d4edda; color: #155724; padding: 1rem; margin-bottom: 1rem; border-radius: 4px; text-align: center;">
+            {{ success_message }}
+          </div>
+          {% endif %}
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              {% for category, message in messages %}
+                <div class="alert alert-{{ category }}" style="background-color: #f8d7da; color: #721c24; padding: 1rem; margin-bottom: 1rem; border-radius: 4px; text-align: center;">
+                  {{ message }}
+                </div>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; min-height: 400px; gap: 4rem;">
+            <div class="contact__info" style="width: 80%; margin-left: -280px;">
+              <h2 class="contact__title" style="font-size: 1.4rem; margin-bottom: 1rem; color: #2c3e50; font-weight: 600; letter-spacing: 0.5px;">Please share your details so we can get in touch with you</h2>
+              <form id="contactForm" class="contact-form" style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" action="/submit" method="POST">
+                <div class="form-group" style="margin-bottom: 1rem;">
+                  <label for="name" style="font-size: 0.9rem; color: #555; display: block; margin-bottom: 0.3rem;">Name</label>
+                  <input type="text" id="name" name="name" required style="padding: 0.8rem; width: 100%; border: 1px solid #ddd; border-radius: 4px; font-size: 0.9rem;">
+                </div>
+                <div class="form-group" style="margin-bottom: 1rem;">
+                  <label for="phone" style="font-size: 0.9rem; color: #555; display: block; margin-bottom: 0.3rem;">Phone</label>
+                  <input type="tel" id="phone" name="phone" required style="padding: 0.8rem; width: 100%; border: 1px solid #ddd; border-radius: 4px; font-size: 0.9rem;">
+                </div>
+                <div class="form-group" style="margin-bottom: 1rem;">
+                  <label for="email" style="font-size: 0.9rem; color: #555; display: block; margin-bottom: 0.3rem;">Email</label>
+                  <input type="email" id="email" name="email" required style="padding: 0.8rem; width: 100%; border: 1px solid #ddd; border-radius: 4px; font-size: 0.9rem;">
+                </div>
+                <div class="form-group" style="margin-bottom: 1rem;">
+                  <label for="message" style="font-size: 0.9rem; color: #555; display: block; margin-bottom: 0.3rem;">Message</label>
+                  <textarea id="message" name="message" rows="3" required style="padding: 0.8rem; width: 100%; border: 1px solid #ddd; border-radius: 4px; font-size: 0.9rem;"></textarea>
+                </div>
+                <div class="form-buttons" style="margin-top: 1.5rem; display: flex; gap: 2rem; justify-content: space-between;">
+                  <button type="submit" class="submit-button" style="padding: 0.8rem 2rem; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 0.9rem;">Submit</button>
+                  <button type="reset" class="clear-button" style="padding: 0.8rem 2rem; background: #6c757d; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 0.9rem;">Clear</button>
+                </div>
+              </form>
+            </div>
+            <div class="contact__contacts" style="width: 45%; margin-right: -280px; margin-top: 3.5rem;">
+              <h2 class="contact__title" style="font-size: 1.4rem; margin-bottom: 1rem; color: #2c3e50; font-weight: 600; letter-spacing: 0.5px; white-space: nowrap;">You can find us at</h2>
+              <div class="contact__connect connect-contact">
+                <a type="tel:+919051977500" href="#" class="connect-contact__item" style="margin-bottom: 0.8rem; display: flex; align-items: center; text-decoration: none; color: #333;">
+                  <div class="connect-contact__icon"><img src="static/images/Contact/phone.svg" alt="ico" style="width: 18px; height: 18px; margin-right: 0.8rem;" /></div>
+                  <div class="connect-contact__content">
+                    <h3 class="connect-contant__type" style="font-size: 0.85rem; margin-bottom: 0.2rem;">Phone</h3>
+                    <div class="connect-contact__label" style="font-size: 0.8rem; color: #666;">+91 90519 77500</div>
+                  </div>
+                </a>
+                <a type="mailto:email@website.com" href="#" class="connect-contact__item" style="margin-bottom: 0.8rem; display: flex; align-items: center; text-decoration: none; color: #333;">
+                  <div class="connect-contact__icon"><img src="static/images/Contact/email.svg" alt="ico" style="width: 18px; height: 18px; margin-right: 0.8rem;" /></div>
+                  <div class="connect-contact__content">
+                    <h3 class="connect-contant__type" style="font-size: 0.85rem; margin-bottom: 0.2rem;">Email</h3>
+                    <div class="connect-contact__label" style="font-size: 0.8rem; color: #666;">email@website.com</div>
+                  </div>
+                </a>
+                <a href="https://www.google.com/maps/place/Skill+Chart/@34.0349095,-118.6967567,942m/data=!3m2!1e3!4b1!4m6!3m5!1s0x80e81e35198c4237:0x9be35a11a754469a!8m2!3d34.0349051!4d-118.6941818!16s%2Fg%2F11vr04dx6l?hl=en&entry=ttu&g_ep=EgoyMDI1MDEwMS4wIKXMDSoASAFQAw%3D%3D"
+                  class="connect-contact__item" style="margin-bottom: 0.8rem; display: flex; align-items: center; text-decoration: none; color: #333;">
+                  <div class="connect-contact__icon"><img src="static/images/Contact/address.svg" alt="ico" style="width: 18px; height: 18px; margin-right: 0.8rem;" /></div>
+                  <div class="connect-contact__content">
+                    <h3 class="connect-contant__type" style="font-size: 0.85rem; margin-bottom: 0.2rem;">Address</h3>
+                    <div class="connect-contact__label" style="font-size: 0.8rem; color: #666;">2727 Ocean Road, Malibu, CA, 90264</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page__map map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d16411.20345240449!2d-118.6941818!3d34.0349051!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e81e35198c4237%3A0x9be35a11a754469a!2sSkill%20Chart!5e1!3m2!1sen!2sua!4v1736237616553!5m2!1sen!2sua"
+          width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <a href="#" class="footer__policy">Privacy Policy – Terms & Conditions</a>
+        <a href="" class="footer__logo logo"><img src="static/images/About/logo.jpg" alt="Logo" /></a>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/shreejitravelogue?igsh=MWJyc3NpZzB0eXg4aA==" target="_blank" class="footer__social-link">
+            <img src="static/images/Contact/insta.svg" alt="Instagram" style="width: 36px; height: 36px;" />
+          </a>
+          <a href="https://x.com/shreejitravelz?t=1FHFgR3ZfrEHtN3TTO1heA&s=09" target="_blank" class="footer__social-link">
+            <img src="static/images/Contact/tw.svg" alt="Facebook" style="width: 36px; height: 36px;" />
+          </a>
+          <a href="https://wa.me/919051977500" target="_blank" class="footer__social-link">
+            <img src="static/images/Contact/whatsapp.svg" alt="WhatsApp" style="width: 36px; height: 36px;" />
+          </a>
+        </div>
+        <div class="footer__copyright">Copyright © 2025 LOGO – All Rights Reserved</div>
+      </div>
+    </footer>
+  </div>
+  <script src="static/js/script.js"></script>
+</body>
+
+</html>
