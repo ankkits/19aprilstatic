@@ -3,10 +3,49 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="Services page description" />
   <link rel="icon" type="image/png" href="static/img/favicon.png" />
   <title>SERVICES</title>
   <link rel="stylesheet" href="static/css/style.css" />
+  <style>
+    @media (max-width: 768px) {
+      .main__container {
+        padding: 0 15px;
+      }
+      .header__container {
+        padding: 10px 15px;
+      }
+      .menu__list {
+        flex-direction: column;
+        align-items: center;
+      }
+      .menu__item {
+        margin: 10px 0;
+      }
+      .main__title {
+        font-size: 1.5rem;
+      }
+      .services__items {
+        flex-direction: column;
+      }
+      .services__item {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .services__icon {
+        margin-bottom: 15px;
+      }
+      .footer__container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .footer__social {
+        margin: 20px 0;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -38,6 +77,34 @@
           <h1 class="main__title">Services</h1>
           <div class="main__text main__text_pages">
             Subheading: Craft a compelling subheading that sparks curiosity.
+          </div>
+        </div>
+      </section>
+      <section class="page__services services">
+        <div class="services__container">
+          <h2 class="services__title title">Our Services</h2>
+          <div class="services__items">
+            <div class="services__item">
+              <div class="services__icon"><img src="static/images/Services/Service-Icon-1.svg" alt="icon" /></div>
+              <h3 class="services__subtitle">Service 1</h3>
+              <div class="services__text">
+                <p>Service 1 Description</p>
+              </div>
+            </div>
+            <div class="services__item">
+              <div class="services__icon"><img src="static/images/Services/Service-Icon-2.svg" alt="icon" /></div>
+              <h3 class="services__subtitle">Service 2</h3>
+              <div class="services__text">
+                <p>Service 2 Description</p>
+              </div>
+            </div>
+            <div class="services__item">
+              <div class="services__icon"><img src="static/images/Services/Service-Icon-3.svg" alt="icon" /></div>
+              <h3 class="services__subtitle">Service 3</h3>
+              <div class="services__text">
+                <p>Service 3 Description</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -3,10 +3,67 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="Contact page description" />
   <link rel="icon" type="image/png" href="static/img/favicon.png" />
   <title>CONTACT</title>
   <link rel="stylesheet" href="static/css/style.css" />
+  <style>
+    @media (max-width: 768px) {
+      .main__container {
+        padding: 0 15px;
+      }
+      .header__container {
+        padding: 10px 15px;
+      }
+      .menu__list {
+        flex-direction: column;
+        align-items: center;
+      }
+      .menu__item {
+        margin: 10px 0;
+      }
+      .main__title {
+        font-size: 1.5rem;
+      }
+      .contact__info {
+        width: 100% !important;
+        margin-left: 0 !important;
+      }
+      .contact__contacts {
+        width: 100% !important;
+        margin-right: 0 !important;
+        margin-top: 20px !important;
+      }
+      .contact-form {
+        padding: 15px !important;
+      }
+      .form-group input,
+      .form-group textarea {
+        font-size: 16px !important; /* Prevents zoom on iOS */
+      }
+      .form-buttons {
+        flex-direction: column;
+        gap: 10px !important;
+      }
+      .submit-button,
+      .clear-button {
+        width: 100% !important;
+      }
+      .footer__container {
+        flex-direction: column;
+        text-align: center;
+      }
+      .footer__social {
+        margin: 20px 0;
+      }
+      .page__map iframe {
+        width: 100% !important;
+        height: 300px !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -83,7 +140,7 @@
                   <div class="connect-contact__icon"><img src="static/images/Contact/phone.svg" alt="ico" style="width: 18px; height: 18px; margin-right: 0.8rem;" /></div>
                   <div class="connect-contact__content">
                     <h3 class="connect-contant__type" style="font-size: 0.85rem; margin-bottom: 0.2rem;">Phone</h3>
-                    <div class="connect-contact__label" style="font-size: 0.8rem; color: #666;">+91 90519 XXXXX</div>
+                    <div class="connect-contact__label" style="font-size: 0.8rem; color: #666;">+91 90519 77500</div>
                   </div>
                 </a>
                 <a type="mailto:email@website.com" href="#" class="connect-contact__item" style="margin-bottom: 0.8rem; display: flex; align-items: center; text-decoration: none; color: #333;">
@@ -98,7 +155,7 @@
                   <div class="connect-contact__icon"><img src="static/images/Contact/address.svg" alt="ico" style="width: 18px; height: 18px; margin-right: 0.8rem;" /></div>
                   <div class="connect-contact__content">
                     <h3 class="connect-contant__type" style="font-size: 0.85rem; margin-bottom: 0.2rem;">Address</h3>
-                    <div class="connect-contact__label" style="font-size: 0.8rem; color: #666;"> Hyderabad India </div>
+                    <div class="connect-contact__label" style="font-size: 0.8rem; color: #666;">2727 Ocean Road, Malibu, CA, 90264</div>
                   </div>
                 </a>
               </div>
