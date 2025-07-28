@@ -1,203 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <meta name="theme-color" content="#ffffff" />
-  <meta name="description" content="Your website description" />
-  <link rel="icon" type="image/png" href="static/img/favicon.png" />
-  <title>HOME</title>
-  <link rel="stylesheet" href="static/css/style.css" />
-  <style>
-    @media (max-width: 768px) {
-      .main__container {
-        padding: 0 15px;
-      }
-      .header__container {
-        padding: 10px 15px;
-      }
-      .menu__list {
-        flex-direction: column;
-        align-items: center;
-      }
-      .menu__item {
-        margin: 10px 0;
-      }
-      .main__title {
-        font-size: 1.5rem;
-      }
-      .main__text {
-        font-size: 0.9rem;
-      }
-      .about__container {
-        flex-direction: column;
-      }
-      .about__image {
-        width: 100%;
-        margin-bottom: 20px;
-      }
-      .about__content {
-        width: 100%;
-      }
-      .services__row {
-        flex-direction: column;
-      }
-      .services__column {
-        width: 100%;
-        margin-bottom: 20px;
-      }
-      .footer__container {
-        flex-direction: column;
-        text-align: center;
-      }
-      .footer__social {
-        margin: 20px 0;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Affordable Flight Deals</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
-  <div class="wrapper">
-    <header class="header">
-      <div class="header__container">
-        <a href="/" class="header__logo logo"><img src="static/images/About/logo.jpg" alt="Logo" /></a>
-        <div class="header__navigation">
-          <div class="header__menu menu">
-            <nav class="menu__body">
-              <ul class="menu__list">
-                <li class="menu__item"><a href="/" class="menu__link">Home</a></li>
-                <li class="menu__item"><a href="/about" class="menu__link">About</a></li>
-                <li class="menu__item"><a href="/services" class="menu__link">Services</a></li>
-                <li class="menu__item"><a href="/contact" class="menu__link">Contact</a></li>
-              </ul>
-            </nav>
-          </div>
-          <div class="header__actions actions-header">
-            <button type="button" class="menu__icon icon-menu"><span></span></button>
-          </div>
-        </div>
-      </div>
-    </header>
-    <main class="page">
-      <section class="page__main main">
-        <div class="main__container">
-          <h3 class="main__caption">Add a Subheading</h3>
-          <h1 class="main__title">H1 Heading</h1>
-          <div class="main__text">
-            Create a compelling and attention-grabbing short description that sparks curiosity and leaves readers
-            intrigued.
-          </div>
-          <a href="#" class="main__button">CTA Button</a>
-        </div>
-      </section>
-      <section class="page__about about">
-        <div class="about__container">
-          <div class="about__image"><img src="static/images/Home/Home-About.jpg" alt="img" /></div>
-          <div class="about__content">
-            <h2 class="about__title title">About Heading</h2>
-            <div class="about__text">
-              <p>
-                About Text: In this section, you can provide a detailed paragraph that delves into the history,
-                values, and mission of your web development business. Highlight expertise, unique approach of your
-                team, and the commitment that sets you apart.
-              </p>
-              <p>
-                Emphasize your passion for creating exceptional web solutions and convey your dedication to delivering
-                remarkable results for clients.
-              </p>
-            </div>
-            <a href="#" class="about__button button">CTA Button</a>
-          </div>
-        </div>
-      </section>
-      <section class="page__services services">
-        <div class="services__container">
-          <h2 class="services__title title">Services Heading</h2>
-          <div class="services__row">
-            <div class="services__column">
-              <div class="services__item item-services">
-                <a class="item-services__top" href="#">
-                  <div class="item-services__image">
-                    <img src="static/images/Home/Home-Service-1.png" alt="img" />
-                  </div>
-                  <h3 class="item-services__title">First Service</h3>
-                </a>
-                <div class="item-services__text">
-                  Craft a brief description outlining the essence of your first service.
-                </div>
-                <a href="#" class="item-services__button button">CTA Button</a>
-              </div>
-            </div>
-            <div class="services__column">
-              <div class="services__item item-services">
-                <a class="item-services__top" href="#">
-                  <div class="item-services__image">
-                    <img src="static/images/Home/Home-Service-2.png" alt="img" />
-                  </div>
-                  <h3 class="item-services__title">Second Service</h3>
-                </a>
-                <div class="item-services__text">
-                  Write a concise statement highlighting the core features of your second service.
-                </div>
-                <a href="#" class="item-services__button button">CTA Button</a>
-              </div>
-            </div>
-            <div class="services__column">
-              <div class="services__item item-services">
-                <a class="item-services__top" href="#">
-                  <div class="item-services__image">
-                    <img src="static/images/Home/Home-Service-3.png" alt="img" />
-                  </div>
-                  <h3 class="item-services__title">First Service</h3>
-                </a>
-                <div class="item-services__text">
-                  Provide a succinct overview key offerings of your third service.
-                </div>
-                <a href="#" class="item-services__button button">CTA Button</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="page__testimonial testimonial">
-        <div class="testimonial__container">
-          <h3 class="testiomonial__caption">Testimonial</h3>
-          <h2 class="testimonial__title title">
-            A comprehensive testimonial will be thoughtfully placed here, complete with all the compelling details and
-            thoughtful insights.
-          </h2>
-          <div class="testimonial__item item-testimonial">
-            <div class="item-testimonial__image">
-              <img src="static/images/Home/Home-Testimonial.jpg" alt="user" />
-            </div>
-            <h4 class="item-testimonial__title">Full Name</h4>
-            <div class="item-testimonial__caption">Job Title</div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="footer__container">
-        <a href="#" class="footer__policy">Privacy Policy – Terms & Conditions</a>
-        <a href="" class="footer__logo logo"><img src="static/images/About/logo.jpg" alt="Logo" /></a>
-        <div class="footer__social">
-          <a href="https://www.instagram.com/shreejitravelogue?igsh=MWJyc3NpZzB0eXg4aA==" target="_blank" class="footer__social-link">
-            <img src="static/images/Contact/insta.svg" alt="Instagram" style="width: 36px; height: 36px;" />
-          </a>
-          <a href="https://x.com/shreejitravelz?t=1FHFgR3ZfrEHtN3TTO1heA&s=09" target="_blank" class="footer__social-link">
-            <img src="static/images/Contact/tw.svg" alt="Facebook" style="width: 36px; height: 36px;" />
-          </a>
-          <a href="https://wa.me/919051977500" target="_blank" class="footer__social-link">
-            <img src="static/images/Contact/whatsapp.svg" alt="WhatsApp" style="width: 36px; height: 36px;" />
-          </a>
-        </div>
-        <div class="footer__copyright">Copyright © 2025 LOGO – All Rights Reserved</div>
-      </div>
-    </footer>
-  </div>
-  <script src="static/js/script.js"></script>
-</body>
+  <header>
+    <nav>
+      <div class="logo">TravelNow</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <section class="hero">
+    <h1>Fly Smart. Save More.</h1>
+    <p>Get exclusive deals from India to Dubai, Qatar, and more.</p>
+    <a href="#lead-form" class="cta-btn">Get a Quote</a>
+  </section>
+
+  <section class="offers">
+    <div class="offer-card">
+      <img src="images/qatar.jpg" alt="Qatar Airways">
+      <h3>Qatar Airways - ₹15,000</h3>
+      <p>India to Dubai – Round Trip</p>
+    </div>
+    <div class="offer-card">
+      <img src="images/airindia.jpg" alt="Air India">
+      <h3>Air India - ₹14,500</h3>
+      <p>India to Abu Dhabi</p>
+    </div>
+    <div class="offer-card">
+      <img src="images/flydubai.jpg" alt="FlyDubai">
+      <h3>FlyDubai - ₹13,999</h3>
+      <p>India to Sharjah</p>
+    </div>
+  </section>
+
+  <!-- Lead form here -->
+  <!-- Paste the lead form from Part 1 -->
+
+  <footer>
+    <p>© 2025 TravelNow | WhatsApp: +91-XXXXXXX | Email: travel@yourcompany.com</p>
+  </footer>
+</body>
 </html>
